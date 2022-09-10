@@ -1,0 +1,8 @@
+<%= form_tag search_stock_path, method: :get do %>
+  <%= text_field_tag :stock, params[:stock], 
+          placeholder: "Stock ticker symbol", 
+          autofocus: true %>
+  <%= button_tag type: :submit do %>
+    Search
+  <% end %>
+<% end %>
