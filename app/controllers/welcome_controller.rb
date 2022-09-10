@@ -4,4 +4,5 @@ class WelcomeController < ApplicationController
 
   def my_portfolio
   end
+
 end

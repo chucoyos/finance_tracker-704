@@ -1,2 +1,13 @@
-<h1>My Portfolio Page</h1>
 <%= link_to 'Home', root_path %>
+<h1>My Portfolio Page</h1>
+
+<%= form_tag search_stock_path, method: :get do %>
+  <%= text_field_tag :stock, params[:stock], 
+          placeholder: "Stock ticker symbol", 
+          autofocus: true %>
+  <%= button_tag type: :submit do %>
+    Search
+  <% end %>
+<% end %>
+
+<%= render partial: 'stocks/result' %>
